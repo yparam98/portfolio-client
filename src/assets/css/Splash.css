@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "GoogleSans-BoldItalic";
+    src: url("../fonts/GoogleSans-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: "GoogleSans-Bold";
+    src: url("../fonts/GoogleSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: "GoogleSans-Italic";
+    src: url("../fonts/GoogleSans-Italic.ttf");
+}
+
+@font-face {
+    font-family: "GoogleSans-MediumItalic";
+    src: url("../fonts/GoogleSans-MediumItalic.ttf");
+}
+
+@font-face {
+    font-family: "GoogleSans-Medium";
+    src: url("../fonts/GoogleSans-Medium.ttf");
+}
+
+@font-face {
+    font-family: "GoogleSans-Regular";
+    src: url("../fonts/GoogleSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "ProductSans-BoldItalic";
+    src: url("../fonts/Product Sans Bold Italic.ttf");
+}
+
+@font-face {
+    font-family: "ProductSans-Bold";
+    src: url("../fonts/Product Sans Bold.ttf");
+}
+
+@font-face {
+    font-family: "ProductSans-Italic";
+    src: url("../fonts/Product Sans Italic.ttf");
+}
+
+@font-face {
+    font-family: "ProductSans-Regular";
+    src: url("../fonts/Product Sans Regular.ttf");
+}
+
+.name-title {
+    font-family: "ProductSans-Regular";
+    font-size: 50px;
+    margin: 20px;
+}
+
+.site-center {
+    display: flex;    
+    justify-content: center;
+    align-items: center;    
+}
+
+.stack {
+    flex-direction: column;
+}
