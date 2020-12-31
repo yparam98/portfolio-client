@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Router, Switch } from 'react-router-dom';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
-import { default as Portfolio_Main } from './Components/Portfolio/Main';
+import { default as PortfolioMain } from './Components/Portfolio/Main';
 import { default as Splash } from './Components/Splash/Main';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div class="site-bg">
@@ -18,7 +13,7 @@ class App extends Component {
           <div class="pagecont">
             <Switch>
               <Route path="/portfolio">
-                <Portfolio_Main />
+                <PortfolioMain />
               </Route>
               <Route path="/">
                 <Splash />

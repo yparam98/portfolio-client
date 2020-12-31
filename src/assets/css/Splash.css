@@ -48,10 +48,44 @@
     src: url("../fonts/Product Sans Regular.ttf");
 }
 
+@font-face {
+    font-family: "Quicksand-Regular";
+    src: url("../fonts/Quicksand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Quicksand-Bold";
+    src: url("../fonts/Quicksand-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Quicksand-Light";
+    src: url("../fonts/Quicksand-Light.ttf");
+}
+
+@font-face {
+    font-family: "Quicksand-Medium";
+    src: url("../fonts/Quicksand-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Goudy";
+    src: url("../fonts/Goudy\ Text\ MT\ Std\ Regular.otf");
+}
+
+@font-face {
+    font-family: "Comic";
+    src: url("../fonts/comic.ttf");
+}
+
 .name-title {
-    font-family: "ProductSans-Regular";
-    font-size: 50px;
+    font-family: "Quicksand-Light";
+    font-size: 40px;
     margin: 20px;
+}
+
+.button-text {
+    font-family: "Quicksand-Regular";
 }
 
 .site-center {
@@ -62,4 +96,22 @@
 
 .stack {
     flex-direction: column;
+}
+
+.side_stack {
+    flex-direction: row;
+}
+
+.splash_reference_buttons {
+    margin-top: 15px;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    /* border: 0.5px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 45px; */
+    padding: 10px;
+}
+
+.social_media_icon {
+    margin: 4px;
 }

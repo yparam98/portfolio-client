@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import Education from './Education'
 
 class Main extends Component {
     constructor(props) {
@@ -7,7 +10,10 @@ class Main extends Component {
 
     render() {
         return (
-            <p>Main page of portfolio</p>
+            <div>
+                <h5>Portfolio</h5>
+                <Education />
+            </div>
         )
     }
 }

@@ -1,0 +1,41 @@
+import facebook_logo from '../assets/icons/facebook.png'
+import github_logo from '../assets/icons/github.png'
+import instagram_logo from '../assets/icons/instagram.png'
+import linkedin_logo from '../assets/icons/linkedin.png'
+import twitter_logo from '../assets/icons/twitter.png'
+import youtube_logo from '../assets/icons/youtube.png'
+
+{
+    "socialmedia": [
+        {
+        "capt": "facebook",
+        "icon": facebook_logo,
+        "link": "https://www.facebook.com/yparam98/"
+        },
+        {
+        "capt": "github",
+        "icon": github_logo,
+        "link": "https://github.com/yparam98"
+        },
+        {
+        "capt": "instagram",
+        "icon": instagram_logo,
+        "link": "https://www.instagram.com/yparam98/"
+        },
+        {
+        "capt": "linkedin",
+        "icon": linkedin_logo,
+        "link": "https://www.linkedin.com/in/yathavanparameshwaran/"
+        },
+        {
+        "capt": "twitter",
+        "icon": twitter_logo,
+        "link": "https://twitter.com/yparam98"
+        },
+        {
+        "capt": "youtube",
+        "icon": youtube_logo,
+        "link": "https://www.youtube.com/channel/UCTyRayLDgFWWf54G6f_wsoQ"
+        }
+    ]
+}
