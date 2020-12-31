@@ -55,7 +55,7 @@ class School extends Component {
                                     this.state.courses.map((val, ind) => {
                                         if (val.display == true) return <li>{val.description}</li>
                                     })
-                                ) : <p>Loading...</p>
+                                ) : <p>Loading</p>
                             }
                         </ol>
                     </div>
