@@ -10,20 +10,21 @@ class School extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            courses: []
+            courses: [],
+            api_url: "https://yathavanparamesh.ca",
         }
     }
 
-    componentDidMount () {
+    componentDidMount() {
         this.getCourses();
     }
 
     getCourses = async () => {
         await axios.get(
-            "https://yathavanparamesh.ca/api/education/courses",
+            this.state.api_url + "/api/education/courses",
             {
                 params: {
-                    school: "Seneca"
+                    school: this.props.school.name
                 }
             }
         ).then((response) => {
@@ -43,21 +44,23 @@ class School extends Component {
 
     render() {
         return (
-            <div>
-                <div class="schoolpanel">
-                    <img src={seneca_logo_white} height='25%' width='25%' />
-                    <div>
-                        <p style={{ color: 'white' }}>{this.props.school.address}</p>
-                        <a style={{ color: 'white' }} href={"tel:" + this.props.school.phone_num}>{this.props.school.phone_num}</a>
-                        <ol>
-                            {
-                                this.state.dataLoaded ? (
-                                    this.state.courses.map((val, ind) => {
-                                        if (val.display == true) return <li>{val.description}</li>
-                                    })
-                                ) : <p>Loading</p>
-                            }
-                        </ol>
+            <div className="schoolpanel" style={{ backgroundColor: this.props.school.colour }}>
+                <img src={this.state.api_url + "/static/" + this.props.school.logo_path} height='25%' width='25%' />
+                <div>
+                    <div className="deets">
+                        <p style={{fontSize: '24px'}}>{this.props.school.dates}</p>
+                        <p>
+                            {this.props.school.address}, <a href={"tel:" + this.props.school.phone_num} style={{ color: 'inherit' }}>{this.props.school.phone_num}</a>
+                        </p>
+                    </div>
+                    <div className="courses">
+                        {
+                            this.state.dataLoaded ? (
+                                this.state.courses.map((val, ind) => {
+                                    if (val.display == true) return <p>{val.description}</p>
+                                })
+                            ) : <p>Loading...</p>
+                        }
                     </div>
                 </div>
             </div>

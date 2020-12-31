@@ -43,7 +43,13 @@ class Education extends Component {
             <div>
                 {
                     this.state.dataLoaded ? (
-                        <School school={this.state.school[0]} />
+                        <div className="schoolcont">
+                            {
+                                this.state.school.map((val, ind) => {
+                                    return <School school={val} />
+                                })
+                            }
+                        </div>
                     ) : <p>Loading...</p>
                 }
             </div >
