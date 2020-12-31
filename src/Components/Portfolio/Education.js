@@ -2,22 +2,22 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import '../../assets/css/portfolio_components/Education.css'
-import School from './SchoolPanel';
+import DegreePanel from './DegreePanel';
 
 class Education extends Component {
     constructor(props) {
         super(props);
         this.state = {
             dataLoaded: false,
-            school: []
+            degree: []
         };
     }
 
-    getSchools = async () => {
-        await axios.get("https://yathavanparamesh.ca/api/education/schools")
+    getDegrees = async () => {
+        await axios.get("https://yathavanparamesh.ca/api/education/getDegrees")
             .then((response) => {
                 for (let instance of response.data) {
-                    this.state.school.push(instance);
+                    this.state.degree.push(instance);
                 }
                 this.setState({
                     dataLoaded: true
@@ -29,9 +29,7 @@ class Education extends Component {
     }
 
     initializeData = async () => {
-        this.getSchools();
-        // this.getCourses();
-
+        this.getDegrees();
     }
 
     render() {
@@ -41,12 +39,13 @@ class Education extends Component {
 
         return (
             <div>
+                <p id="comptag">Education</p>
                 {
                     this.state.dataLoaded ? (
-                        <div className="schoolcont">
+                        <div className="degree_container">
                             {
-                                this.state.school.map((val, ind) => {
-                                    return <School school={val} />
+                                this.state.degree.map((val, ind) => {
+                                    return <DegreePanel degree={val} />
                                 })
                             }
                         </div>
