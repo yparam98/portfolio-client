@@ -65,7 +65,7 @@ class DegreePanel extends Component {
                 <img src={this.state.api_url + "/static/" + this.state.school.logo_path} height='25%' width='25%' />
                 <div>
                     <div className="deets">
-                        <p style={{ fontSize: '24px' }}>{this.props.degree.type} in {this.props.degree.name} ({this.props.degree.duration})</p>
+                        <p id="degree_title">{this.props.degree.type} in {this.props.degree.name} ({this.props.degree.duration})</p>
                         <p><a href={"https://www.google.com/maps/place/" + this.state.school.address} style={{ color: 'inherit' }}>{this.state.school.address}</a></p>
                         <p><a href={"tel:" + this.state.school.phone_num} style={{ color: 'inherit' }}>{this.state.school.phone_num}</a></p>
                     </div>

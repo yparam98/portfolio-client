@@ -2,6 +2,12 @@
     flex-direction: row;
 }
 
+#degree_title {
+    font-family: "Quicksand-Regular";
+    font-size: 20px;  
+    color: white; 
+}
+
 .degree_panel {
     padding: 50px;
     margin: 10px;
