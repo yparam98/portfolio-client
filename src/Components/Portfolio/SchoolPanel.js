@@ -49,7 +49,7 @@ class School extends Component {
                     <div>
                         <p style={{ color: 'white' }}>{this.props.school.address}</p>
                         <a style={{ color: 'white' }} href={"tel:" + this.props.school.phone_num}>{this.props.school.phone_num}</a>
-                        <ul>
+                        <ol>
                             {
                                 this.state.dataLoaded ? (
                                     this.state.courses.map((val, ind) => {
@@ -57,7 +57,7 @@ class School extends Component {
                                     })
                                 ) : <p>Loading...</p>
                             }
-                        </ul>
+                        </ol>
                     </div>
                 </div>
             </div>
