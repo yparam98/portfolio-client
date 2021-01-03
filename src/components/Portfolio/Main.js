@@ -11,7 +11,7 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <p style={{ fontFamily: 'monospace', color: 'red' }}>CURRENTLY IN PROGRESS</p>
+                <p style={{ fontFamily: 'monospace', color: 'red' }}><strong>PORTFOLIO UNDER CONSTRUCTION</strong></p>
                 <Education />
             </div>
         )

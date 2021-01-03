@@ -1,11 +1,18 @@
-.degree_container {
+.degree_container {    
+    flex: 1;
     flex-direction: row;
+    /* display: flex; */
 }
 
 #degree_title {
     font-family: "Quicksand-Regular";
     font-size: 20px;  
     color: white; 
+}
+
+#school_logo {
+    width: 25%;
+    height: 25%;
 }
 
 .degree_panel {
@@ -22,8 +29,8 @@
     font-size: 20px;
     margin: 10px;
     height: 200px;
-    overflow-y: scroll;
-    scrollbar-width: none;       
+    overflow-y: scroll;   
+    scrollbar-width: none;
 }
 
 .deets {

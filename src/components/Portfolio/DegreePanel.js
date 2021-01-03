@@ -62,7 +62,7 @@ class DegreePanel extends Component {
     render() {
         return (
             <div className="degree_panel" style={{ backgroundColor: this.state.school.colour }}>
-                <img src={this.state.api_url + "/static/" + this.state.school.logo_path} height='25%' width='25%' />
+                <img id="school_logo" src={this.state.api_url + "/static/" + this.state.school.logo_path} />
                 <div>
                     <div className="deets">
                         <p id="degree_title">{this.props.degree.type} in {this.props.degree.name} ({this.props.degree.duration})</p>
