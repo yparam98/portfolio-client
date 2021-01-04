@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import '../../assets/css/portfolio_components/Education.css'
-import DegreePanel from './DegreePanel';
+import Degree from './Degree';
+import { default as Courses } from './Courses';
 
 class Education extends Component {
     constructor(props) {
@@ -44,7 +45,7 @@ class Education extends Component {
                         <div className="degree_container">
                             {
                                 this.state.degree.map((val, ind) => {
-                                    return <DegreePanel degree={val} />
+                                    return <Degree degree={val} courses={<Courses degree={val} />} />
                                 })
                             }
                         </div>

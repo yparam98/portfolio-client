@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import '../../assets/css/portfolio_components/Education.css'
 import axios from 'axios';
-import { default as Courses } from './Courses';
 
-class DegreePanel extends Component {
+class Degree extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -52,11 +51,11 @@ class DegreePanel extends Component {
                         <p><a href={"https://www.google.com/maps/place/" + this.state.school.address} style={{ color: 'inherit' }}>{this.state.school.address}</a></p>
                         <p><a href={"tel:" + this.state.school.phone_num} style={{ color: 'inherit' }}>{this.state.school.phone_num}</a></p>
                     </div>
-                    <Courses degree={this.props.degree} />
+                    {this.props.courses}
                 </div>
             </div>
         ) : <p>Data Loaded...</p>
     }
 }
 
-export default DegreePanel;
+export default Degree;
