@@ -83,6 +83,11 @@
   src: url("./assets/fonts/LoveYaLikeASister.ttf");
 }
 
+@font-face {
+  font-family: "Bangers";
+  src: url("./assets/fonts/Bangers-Regular.ttf");
+}
+
 * {
   user-select: none;   
 }

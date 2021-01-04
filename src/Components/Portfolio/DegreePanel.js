@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-
-import seneca_logo from '../../assets/logos/seneca.png'
-import seneca_logo_white from '../../assets/logos/seneca_white.png'
-
 import '../../assets/css/portfolio_components/Education.css'
 import axios from 'axios';
 
