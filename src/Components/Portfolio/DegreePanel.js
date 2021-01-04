@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../assets/css/portfolio_components/Education.css'
 import axios from 'axios';
+import { default as Courses } from './Courses';
 
 class DegreePanel extends Component {
     constructor(props) {
@@ -9,33 +10,18 @@ class DegreePanel extends Component {
             school: {},
             courses: [],
             api_url: "https://yathavanparamesh.ca",
+            dataLoaded: false,
         }
     }
 
     componentDidMount() {
-        this.getCourses();
-        this.getSchool();
+        // this.getCourses();
+        this.getData();
     }
 
-    getCourses = async () => {
-        await axios.get(
-            this.state.api_url + "/api/education/getCoursesByDegree",
-            {
-                params: {
-                    id: this.props.degree.degree_id,
-                }
-            }
-        ).then((response) => {
-            for (let instance of response.data) {
-                this.state.courses.push(instance);
-            }
-            this.setState({
-                dataLoaded: true
-            });
-        }).catch((err) => {
-            console.log("Error: " + err);
-        });
-    };
+    getData = async () => {
+        await this.getSchool();
+    }
 
     getSchool = async () => {
         await axios.get(
@@ -56,27 +42,20 @@ class DegreePanel extends Component {
     };
 
     render() {
-        return (
+        return this.state.dataLoaded ? (
             <div className="degree_panel col-md-5" style={{ backgroundColor: this.state.school.colour }}>
                 <img id="school_logo" src={this.state.api_url + "/static/" + this.state.school.logo_path} />
+                <hr />
                 <div>
                     <div className="deets">
                         <p id="degree_title">{this.props.degree.type} in {this.props.degree.name} ({this.props.degree.duration})</p>
                         <p><a href={"https://www.google.com/maps/place/" + this.state.school.address} style={{ color: 'inherit' }}>{this.state.school.address}</a></p>
                         <p><a href={"tel:" + this.state.school.phone_num} style={{ color: 'inherit' }}>{this.state.school.phone_num}</a></p>
                     </div>
-                    <div className="courses">
-                        {
-                            this.state.dataLoaded ? (
-                                this.state.courses.map((val, ind) => {
-                                    if (val.display == true) return <p>{val.description}</p>
-                                })
-                            ) : <p>Loading...</p>
-                        }
-                    </div>
+                    <Courses degree={this.props.degree} />
                 </div>
             </div>
-        )
+        ) : <p>Data Loaded...</p>
     }
 }
 

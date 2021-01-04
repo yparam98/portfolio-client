@@ -39,7 +39,6 @@ class Education extends Component {
 
         return (
             <div>
-                <p id="comptag">Education</p>
                 {
                     this.state.dataLoaded ? (
                         <div className="degree_container">

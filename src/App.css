@@ -90,6 +90,7 @@
 
 * {
   user-select: none;   
+  scrollbar-width: none;    
 }
 
 #comptag {
