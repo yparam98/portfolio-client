@@ -57,7 +57,7 @@ class DegreePanel extends Component {
 
     render() {
         return (
-            <div className="degree_panel" style={{ backgroundColor: this.state.school.colour }}>
+            <div className="degree_panel col-md-5" style={{ backgroundColor: this.state.school.colour }}>
                 <img id="school_logo" src={this.state.api_url + "/static/" + this.state.school.logo_path} />
                 <div>
                     <div className="deets">

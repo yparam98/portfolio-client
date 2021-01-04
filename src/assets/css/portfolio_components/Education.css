@@ -1,7 +1,9 @@
 .degree_container {    
     flex: 1;
     flex-direction: row;
-    /* display: flex; */
+    display: inline-flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
 
 #degree_title {
@@ -12,7 +14,8 @@
 
 #school_logo {
     width: 25%;
-    height: 25%;
+    /* height: 25%; */
+    /* aspect-ratio: 1; */
 }
 
 .degree_panel {
