@@ -1,11 +1,11 @@
 .degree_container {    
     flex: 1;
-    flex-direction: row-reverse;
+    flex-direction: row;
     display: flex;
     overflow-x: scroll;
     scrollbar-width: none;    
     align-content: space-around;
-    justify-content: start;
+    /* justify-content:center; */
 }
 
 #degree_title {
@@ -22,7 +22,6 @@
 
 .degree_panel {
     padding: 20px;
-    margin: 10px;
     /* background-color: rgb(0, 0, 0); */
     color: white;
 }
@@ -31,7 +30,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     font-family: "GoogleSans-Regular";
-    font-size: 20px;
+    font-size: 16px;
     /* margin: 10px; */
     height: 200px;
     overflow-y: scroll;   
