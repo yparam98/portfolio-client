@@ -66,6 +66,7 @@ export default function SkillDisplay() {
 
     return (
         <div>
+            <h1 id="skills_heading">Skills</h1>
             {
                 dataLoaded ? (
                     <div className="skill-graph-container">

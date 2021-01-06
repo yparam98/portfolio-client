@@ -10,23 +10,24 @@ class Education extends Component {
         super(props);
         this.state = {
             dataLoaded: false,
-            degree: []
+            degree: [],
         };
     }
 
     getDegrees = async () => {
-        await axios.get("https://yathavanparamesh.ca/api/education/getDegrees")
-            .then((response) => {
-                for (let instance of response.data) {
-                    this.state.degree.push(instance);
-                }
-                this.setState({
-                    dataLoaded: true
-                });
-            })
-            .catch((err) => {
-                console.log("Error: " + err);
+        await axios.get("https://yathavanparamesh.ca/api/education/getDegrees", {
+
+
+        }).then((response) => {
+            for (let instance of response.data) {
+                this.state.degree.push(instance);
+            }
+            this.setState({
+                dataLoaded: true
             });
+        }).catch((err) => {
+            console.info("Error: " + err);
+        });
     }
 
     initializeData = async () => {
@@ -40,16 +41,15 @@ class Education extends Component {
 
         return (
             <div>
+                <h1 id="education_heading">Education</h1>
                 {
                     this.state.dataLoaded ? (
                         <div className="degree_container">
-                            {
-                                this.state.degree.map((val, ind) => {
-                                    return <Degree degree={val} courses={<Courses degree={val} />} />
-                                })
-                            }
+                            { this.state.degree.map((val, ind) => {
+                                return <Degree degree={val} courses={<Courses degree={val} />} />
+                            })}
                         </div>
-                    ) : <p>Loading...</p>
+                    ) : <p></p>
                 }
             </div >
         )

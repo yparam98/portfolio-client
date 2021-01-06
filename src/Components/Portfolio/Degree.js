@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../assets/css/portfolio_components/Education.css'
 import axios from 'axios';
+import Stripe from '../utils/Stripe';
 
 class Degree extends Component {
     constructor(props) {
@@ -14,7 +15,6 @@ class Degree extends Component {
     }
 
     componentDidMount() {
-        // this.getCourses();
         this.getData();
     }
 
@@ -42,9 +42,10 @@ class Degree extends Component {
 
     render() {
         return this.state.dataLoaded ? (
-            <div className="degree_panel col-md-5" style={{ backgroundColor: this.state.school.colour }}>
-                <img id="school_logo" src={this.state.api_url + "/static/" + this.state.school.logo_path} />
-                <hr />
+            <div className="degree_panel">
+                {/* <img id='school_logo' src={this.state.api_url + "/static/" + this.state.school.logo_path} /> */}
+                <Stripe css_tag={"school_logo"} image_path={this.state.api_url + "/static/" + this.state.school.logo_path} school={this.state.school} />
+                {/* <hr />
                 <div>
                     <div className="deets">
                         <p id="degree_title">{this.props.degree.type} in {this.props.degree.name} ({this.props.degree.duration})</p>
@@ -52,8 +53,8 @@ class Degree extends Component {
                         <p><a href={"tel:" + this.state.school.phone_num} style={{ color: 'inherit' }}>{this.state.school.phone_num}</a></p>
                     </div>
                     {this.props.courses}
-                </div>
-            </div>
+                </div> */}
+            </div >
         ) : <p>Data Loaded...</p>
     }
 }

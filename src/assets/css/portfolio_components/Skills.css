@@ -1,4 +1,27 @@
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(0%); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.01; }
+    to   { opacity: 1; }
+}
+
+#skills_heading {
+    animation-name: slideIn;
+    animation-duration: 1s;
+
+    font-family: "Bangers";
+    font-size: 50px;
+    color: black;    
+    text-align: center;
+}
+
 .skill-graph-container {
+    animation-name: fadeIn;
+    animation-duration: 3s;    
+
     flex: 1;
     flex-direction: row;
     display: inline-flex;

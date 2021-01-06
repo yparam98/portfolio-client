@@ -1,11 +1,30 @@
+@keyframes fadeIn {
+    from { opacity: 0.01; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(0%); }
+}
+
+
+#education_heading {
+    animation-name: slideIn;
+    animation-duration: 1s;
+
+    font-family: "Bangers";
+    font-size: 50px;
+    color: black;    
+    text-align: center;
+}
+
 .degree_container {    
     flex: 1;
-    flex-direction: row;
-    display: flex;
-    overflow-x: scroll;
-    scrollbar-width: none;    
-    align-content: space-around;
-    /* justify-content:center; */
+    flex-direction: column;
+    scrollbar-width: none;
+    align-content: space-between;
+    justify-content:flex-start;        
 }
 
 #degree_title {
@@ -14,16 +33,38 @@
     color: white; 
 }
 
-#school_logo {
-    width: 25%;
-    /* height: 25%; */
-    /* aspect-ratio: 1; */
+#stripe_logo {
+    position: absolute;
+    width: 15%;    
+    margin-left: 50px;
+}
+
+.stripe {
+    flex: 1;
+    display: block;
+    position: relative; 
+    width: 5%;
+    height: 5%;
+    background: white;
+    mask-size:cover;
+
+    /*    
+    background-repeat: no-repeat;
+    background-size: 25% 100%;
+    vertical-align:auto; */
 }
 
 .degree_panel {
+    animation-name: slideIn;
+    animation-duration: 2s;
+
+    margin: 5px;
     padding: 20px;
-    /* background-color: rgb(0, 0, 0); */
     color: white;
+    
+    border: 1px;
+    border-style: dashed;
+    border-color: black;
 }
 
 .courses {
