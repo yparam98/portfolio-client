@@ -1,0 +1,28 @@
+@keyframes fadeIn {
+    from { opacity: 0.01; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideLR {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(0%); }
+}
+
+@keyframes slideRL {
+    from { transform: translateX(+100%); }
+    to   { transform: translateX(0%); }
+}
+
+.canvas {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+#splashtag {
+    animation-name: slideLR;
+    animation-duration: 1s;
+
+    font-family: 'Bangers';
+    color: white;
+    font-size: 68px;
+    text-align: center;
+}

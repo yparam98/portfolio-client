@@ -65,7 +65,7 @@ export default function SkillDisplay() {
 
 
     return (
-        <div>
+        <div style={{backgroundColor: 'white'}}>
             <h1 id="skills_heading">Skills</h1>
             {
                 dataLoaded ? (

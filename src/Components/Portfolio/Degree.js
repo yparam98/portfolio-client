@@ -43,16 +43,24 @@ class Degree extends Component {
     render() {
         return this.state.dataLoaded ? (
             <div className="degree_panel">
-                {/* <img id='school_logo' src={this.state.api_url + "/static/" + this.state.school.logo_path} /> */}
-                <Stripe css_tag={"school_logo"} image_path={this.state.api_url + "/static/" + this.state.school.logo_path} school={this.state.school} />
-                {/* <hr />
-                <div>
+                <div className="col-md-4 animateEntrySlideLR">
+                    <img id='school_logo' src={this.state.api_url + "/static/" + this.state.school.logo_path} />
+                    <div id="degree_tag" style={{ color: this.state.school.colour }}>
+                        <p><strong>{this.props.degree.type}</strong> in {this.props.degree.name}</p>
+                    </div>
+                </div>
+                <div className="col-md-5 animateEntrySlideRL">
+                    {this.props.courses}
+                </div>
+                {/* <Stripe css_tag={"school_logo"} image_path={this.state.api_url + "/static/" + this.state.school.logo_path} school={this.state.school} /> */}
+                {/* <hr /> */}
+                {/* <div>
                     <div className="deets">
                         <p id="degree_title">{this.props.degree.type} in {this.props.degree.name} ({this.props.degree.duration})</p>
                         <p><a href={"https://www.google.com/maps/place/" + this.state.school.address} style={{ color: 'inherit' }}>{this.state.school.address}</a></p>
                         <p><a href={"tel:" + this.state.school.phone_num} style={{ color: 'inherit' }}>{this.state.school.phone_num}</a></p>
                     </div>
-                    {this.props.courses}
+                    
                 </div> */}
             </div >
         ) : <p>Data Loaded...</p>

@@ -91,10 +91,13 @@
 * {
   user-select: none;   
   scrollbar-width: none;    
+  margin: 0;
+  padding: 0;
 }
 
-body {
+body, html {
   /* background-color: rgb(41, 41, 41); */
+  height: 100%;
 }
 
 #comptag {

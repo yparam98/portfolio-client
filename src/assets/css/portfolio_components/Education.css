@@ -3,16 +3,28 @@
     to   { opacity: 1; }
 }
 
-@keyframes slideIn {
+@keyframes slideLR {
     from { transform: translateX(-100%); }
     to   { transform: translateX(0%); }
 }
 
+@keyframes slideRL {
+    from { transform: translateX(+100%); }
+    to   { transform: translateX(0%); }
+}
+
+.animateEntrySlideLR {
+    animation-name: slideLR;
+    animation-duration: 2000ms;
+}
+
+.animateEntrySlideRL {
+    animation-name: slideRL;
+    animation-duration: 2000ms;
+}
+
 
 #education_heading {
-    animation-name: slideIn;
-    animation-duration: 1s;
-
     font-family: "Bangers";
     font-size: 50px;
     color: black;    
@@ -24,19 +36,19 @@
     flex-direction: column;
     scrollbar-width: none;
     align-content: space-between;
-    justify-content:flex-start;        
+    justify-content: flex-start;      
 }
 
 #degree_title {
     font-family: "GoogleSans-Regular";
     font-size: 16px;  
-    color: white; 
+    color: black; 
 }
 
-#stripe_logo {
-    position: absolute;
-    width: 15%;    
-    margin-left: 50px;
+#school_logo {
+    width: 100%;
+    padding: 0px;
+    /* background-color: red; */
 }
 
 .stripe {
@@ -55,32 +67,56 @@
 }
 
 .degree_panel {
-    animation-name: slideIn;
-    animation-duration: 2s;
+    flex: 1;
+    flex-direction: row;
+    display:inline-flex;
+    position: relative;
 
-    margin: 5px;
-    padding: 20px;
-    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    align-items: center;
+
     
-    border: 1px;
+    /* padding: 20px; */
+    color: white;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    /* background-color: green; */
+    
+    /* border: 1px;
     border-style: dashed;
-    border-color: black;
+    border-color: black; */
+}
+
+#degree_tag {
+    font-family: "GoogleSans-Regular";
+    font-size: 16px;
 }
 
 .courses {
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: blue; */
     padding: 20px;
     font-family: "GoogleSans-Regular";
+    color: black;
     font-size: 16px;
     /* margin: 10px; */
     height: 200px;
     overflow-y: scroll;   
     scrollbar-width: none;
+
+    border: 1px;
+    border-style: dashed;
+    border-color: black;
+    border-radius: 15px;
 }
 
 .deets {
     font-family: "GoogleSans-Regular";
-    color: white;
+    color: black;
     font-size: 14px;
     margin: 10px;
     text-decoration: none;
