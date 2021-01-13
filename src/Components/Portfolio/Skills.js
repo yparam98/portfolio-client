@@ -66,7 +66,7 @@ export default function SkillDisplay() {
 
     return (
         <div style={{backgroundColor: 'white'}}>
-            <h1 id="skills_heading">Skills</h1>
+            <h1 id="skills_heading">Skills <i>(in years of experience)</i></h1>
             {
                 dataLoaded ? (
                     <div className="skill-graph-container">
