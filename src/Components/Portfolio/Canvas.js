@@ -5,18 +5,20 @@ import { Line, Num, Util } from 'pts';
 import { render } from 'react-dom';
 
 export default function Canvas() {
-    const [height, setHeight] = useState(document.body.clientHeight);
-    const [width, setWidth] = useState(document.body.clientWidth);
+    const [state_height, setHeight] = useState(document.body.clientHeight);
+    const [state_width, setWidth] = useState(document.body.clientWidth);
 
     useEffect(() => {
         document.addEventListener('scroll', (e) => {
-            setHeight(height - window.scrollY);
-            console.info(window.scrollY);
+            if (state_height > 0) {
+                setHeight(state_height - window.scrollY);
+                console.log("height: " + state_height);
+            }            
         });
     }, []);
 
     return (
-        <div className="canvas" style={{ height: height, width: width }}>
+        <div className="canvas" style={{ height: state_height, width: state_width }}>
             <p id="splashtag">Yathavan Parameshwaran</p>
         </div>
     );

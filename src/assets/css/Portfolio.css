@@ -1,7 +1,7 @@
 #portfolio_container {
     height: 100%;
-    background-image: url('https://yathavanparamesh.ca/static/images/background.svg');
-    background-size:cover;
+    background-image: url('https://yathavanparamesh.ca/static/images/backdrop.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
 }

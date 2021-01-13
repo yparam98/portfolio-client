@@ -12,8 +12,8 @@
     animation-name: slideIn;
     animation-duration: 1s;
 
-    font-family: "Bangers";
-    font-size: 50px;
+    /* font-family: "Bangers"; */
+    font-size: 30px;
     color: black;    
     text-align: center;
 }
@@ -29,7 +29,7 @@
     scrollbar-width: none;    
     width: 100%;
 
-    font-family: "GoogleSans-Regular";
+    /* font-family: "GoogleSans-Regular"; */
     font-size: 16px;
     color: black;
 }

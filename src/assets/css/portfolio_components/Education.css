@@ -25,7 +25,7 @@
 
 
 #education_heading {
-    font-family: "Bangers";
+    /* font-family: "Bangers"; */
     font-size: 50px;
     color: black;    
     text-align: center;
@@ -40,7 +40,7 @@
 }
 
 #degree_title {
-    font-family: "GoogleSans-Regular";
+    /* font-family: 'Raleway', sans-serif; */
     font-size: 16px;  
     color: black; 
 }
@@ -93,14 +93,14 @@
 }
 
 #degree_tag {
-    font-family: "GoogleSans-Regular";
+    /* font-family: "GoogleSans-Regular"; */
     font-size: 16px;
 }
 
 .courses {
     /* background-color: blue; */
     padding: 20px;
-    font-family: "GoogleSans-Regular";
+    /* font-family: "GoogleSans-Regular"; */
     color: black;
     font-size: 16px;
     /* margin: 10px; */
@@ -115,7 +115,7 @@
 }
 
 .deets {
-    font-family: "GoogleSans-Regular";
+    /* font-family: "GoogleSans-Regular"; */
     color: black;
     font-size: 14px;
     margin: 10px;

@@ -14,14 +14,14 @@
 }
 
 .canvas {
-    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #splashtag {
     animation-name: slideLR;
     animation-duration: 1s;
 
-    font-family: 'Bangers';
+    /* font-family: 'Bangers'; */
     color: white;
     font-size: 68px;
     text-align: center;
