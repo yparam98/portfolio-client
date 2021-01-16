@@ -36,7 +36,8 @@
     flex-direction: column;
     scrollbar-width: none;
     align-content: space-between;
-    justify-content: flex-start;      
+    justify-content: flex-start; 
+    background-color: white;     
 }
 
 #degree_title {

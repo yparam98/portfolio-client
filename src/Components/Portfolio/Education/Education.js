@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import '../../assets/css/portfolio_components/Education.css'
+import '../../../assets/css/portfolio_components/Education.css'
 import Degree from './Degree';
 import { default as Courses } from './Courses';
 
@@ -40,7 +40,7 @@ class Education extends Component {
         }
 
         return (
-            <div style={{backgroundColor: 'white'}}>
+            <div>
                 {/* <h1 id="education_heading">Education</h1> */}
                 {
                     this.state.dataLoaded ? (

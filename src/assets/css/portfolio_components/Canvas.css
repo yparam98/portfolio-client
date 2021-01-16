@@ -17,18 +17,24 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#splashtag {
-    animation-name: slideLR;
-    animation-duration: 1s;
-
-    /* font-family: 'Bangers'; */
-    color: white;
-    font-size: 50px;
-    text-align: center;
+#splashtag-bg {
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
+    text-align: center;
 
     position: sticky;
     position: -webkit-sticky;
     top: 0;
 
+    margin: 0;
+}
+
+#splashtag {
+    animation-name: slideLR;
+    animation-duration: 1s;
+    
+    color: white;
+    font-size: 50px;
+
+    margin: 0;
 }

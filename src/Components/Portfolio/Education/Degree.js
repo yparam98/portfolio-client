@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../../assets/css/portfolio_components/Education.css'
+import '../../../assets/css/portfolio_components/Education.css'
 import axios from 'axios';
-import Stripe from '../utils/Stripe';
+import Stripe from '../../utils/Stripe';
 
 class Degree extends Component {
     constructor(props) {
@@ -43,7 +43,7 @@ class Degree extends Component {
     render() {
         return this.state.dataLoaded ? (
             <div className="degree_panel">
-                <div className="col-md-4 animateEntrySlideLR">
+                <div className="col-md-3 animateEntrySlideLR">
                     <img id='school_logo' src={this.state.api_url + "/static/" + this.state.school.logo_path} />
                     <div id="degree_tag" style={{ color: this.state.school.colour }}>
                         <p><strong>{this.props.degree.type}</strong> in {this.props.degree.name}</p>

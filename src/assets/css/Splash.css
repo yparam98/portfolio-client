@@ -1,3 +1,28 @@
+@keyframes fadeIn {
+    from { opacity: 0.01; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideLR {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(0%); }
+}
+
+@keyframes slideRL {
+    from { transform: translateX(+100%); }
+    to   { transform: translateX(0%); }
+}
+
+.animateEntrySlideLR {
+    animation-name: slideLR;
+    animation-duration: 2000ms;
+}
+
+.animateEntrySlideRL {
+    animation-name: slideRL;
+    animation-duration: 2000ms;
+}
+
 .name-title {
     /* font-family: "Quicksand-Light"; */
     font-size: 40px;
@@ -24,12 +49,10 @@
 }
 
 .splash_reference_buttons {
-    margin-top: 15px;
-    /* background-color: rgba(0, 0, 0, 0.9); */
-    /* border: 0.5px;
-    border-color: gray;
-    border-style: solid;
-    border-radius: 45px; */
+    animation-name: slideRL;
+    animation-duration: 2000ms;
+    
+    margin-top: 15px;    
     padding: 10px;
 }
 
