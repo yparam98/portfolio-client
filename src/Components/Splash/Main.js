@@ -8,7 +8,7 @@ import instagram_logo from '../../assets/icons/instagram.png'
 import linkedin_logo from '../../assets/icons/linkedin.png'
 import twitter_logo from '../../assets/icons/twitter.png'
 import youtube_logo from '../../assets/icons/youtube.png'
-import whatsapp_logo from '../../assets/icons/whatsapp.png'
+import telegram_logo from '../../assets/icons/telegram.png'
 
 class Main extends Component {
     constructor(props) {
@@ -46,11 +46,10 @@ class Main extends Component {
                     link: "https://www.youtube.com/channel/UCTyRayLDgFWWf54G6f_wsoQ"
                 },
                 {
-                    capt: "whatsapp",
-                    icon: whatsapp_logo,
-                    link: "https://wa.me/+19055379705"
-                }
-
+                    capt: "telegram",
+                    icon: telegram_logo,
+                    link: "https://t.me/yparam98"
+                },
             ]
         };
     }

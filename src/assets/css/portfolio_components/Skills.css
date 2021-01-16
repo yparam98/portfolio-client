@@ -23,13 +23,12 @@
     animation-duration: 3s;    
 
     flex: 1;
-    flex-direction: row;
+    flex-direction: column;
     display: inline-flex;
     overflow-x: scroll;
     scrollbar-width: none;    
     width: 100%;
-
-    /* font-family: "GoogleSans-Regular"; */
+    
     font-size: 16px;
     color: black;
 }

@@ -1,8 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import '../../assets/css/portfolio_components/Canvas.css';
-import { PtsCanvas, QuickStartCanvas } from 'react-pts-canvas';
-import { Line, Num, Util } from 'pts';
-import { render } from 'react-dom';
+import Transition from 'react-transition-group/Transition';
 
 export default function Canvas() {
     const [state_height, setHeight] = useState(document.body.clientHeight);
@@ -12,12 +10,41 @@ export default function Canvas() {
         document.addEventListener('scroll', (e) => {
             if (state_height > 0) {
                 setHeight(state_height - window.scrollY);
-                console.log("height: " + state_height);
-            }            
+            }
         });
     }, []);
 
+    // const duration = 300;
+
+    // const defaultStyle = {
+    //     transition: `opacity ${duration}ms ease-in-out`,
+    //     opacity: 0,
+    // }
+
+    // const transitionStyles = {
+    //     entering: { opacity: 1 },
+    //     entered: { opacity: 1 },
+    //     exiting: { opacity: 0 },
+    //     exited: { opacity: 0 },
+    // };
+
+    // const Fade = ({ in: inProp }) => (
+    //     <Transition in={inProp} timeout={duration}>
+    //         {state => (
+    //             <div style={{
+    //                 ...defaultStyle,
+    //                 ...transitionStyles[state]
+    //             }}>
+    //                 I'm a fade Transition!
+    //             </div>
+    //         )}
+    //     </Transition>
+    // );
+
+    // const Parking = <p>Parking</p>
+
     return (
+        // Fade
         <div className="canvas" style={{ height: state_height, width: state_width }}>
             <p id="splashtag">Yathavan Parameshwaran</p>
         </div>

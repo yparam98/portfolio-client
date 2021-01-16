@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import moment from 'moment';
 // import * as Recharts from "recharts/umd/Recharts";
 import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer } from "recharts/umd/Recharts";
@@ -65,7 +65,7 @@ export default function SkillDisplay() {
 
 
     return (
-        <div style={{backgroundColor: 'white'}}>
+        <div style={{ backgroundColor: 'white' }}>
             <h1 id="skills_heading">Skills <i>(in years of experience)</i></h1>
             {
                 dataLoaded ? (
@@ -75,7 +75,9 @@ export default function SkillDisplay() {
                                 return (
                                     <div className="skill_panel">
                                         <p>{val.name}</p>
-                                        <Skills category={val.cat_id} />
+                                        <Suspense fallback={<div>Loading</div>}>
+                                            <Skills category={val.cat_id} />
+                                        </Suspense>
                                     </div>
                                 );
                             })
