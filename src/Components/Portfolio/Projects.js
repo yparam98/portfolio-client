@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function Main() {
+export default function Main() {
     return (
         <div>
             <p>Projects Main Panel</p>

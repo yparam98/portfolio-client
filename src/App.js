@@ -8,7 +8,7 @@ import { default as Splash } from './Components/Splash/Main';
 class App extends Component {
   render() {
     return (
-      <div class="site-bg">
+      <div>
         <BrowserRouter>
           <div class="pagecont">
             <Switch>

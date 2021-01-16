@@ -1,25 +1,21 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import moment from 'moment';
 // import * as Recharts from "recharts/umd/Recharts";
-import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer } from "recharts/umd/Recharts";
+import { BarChart, Tooltip, XAxis, YAxis, Bar } from "recharts/umd/Recharts";
 
 import "../../assets/css/portfolio_components/Skills.css";
 
-function Skills(props) {
+export default function Skills() {
     const [skills, setSkills] = useState([]);
     const [dataLoaded, setDataLoaded] = useState(false);
 
     useEffect(async () => {
-        const result = await axios("https://yathavanparamesh.ca/api/expertise/getSkillsByCategory", {
-            params: { id: props.category }
-        });
+        const result = await axios("https://yathavanparamesh.ca/api/expertise/getNeededSkills");
 
         result.data.forEach((instance) => {
             instance.learned = (moment().year() - instance.learned);
         });
-
-        // console.info(result.data);
         setSkills(result.data);
         setDataLoaded(true);
     }, []);
@@ -28,61 +24,23 @@ function Skills(props) {
         <div>
             {
                 dataLoaded ? (
-                    <ResponsiveContainer height={400} width={600}>
-                        <RadarChart cy={200} outerRadius={150} width={400} height={200} data={skills}>
-                            <PolarGrid />
-                            <PolarAngleAxis dataKey="name" />
-                            <PolarRadiusAxis />
-                            <Radar dataKey="learned" stroke="#004d00" fill="#008000" fillOpacity={0.5} />
-                        </RadarChart>
-                    </ResponsiveContainer>
-                ) : <p>Data Loading...</p>
-            }
-        </div>
-    );
-};
-
-export default function SkillDisplay() {
-    const [skillsCategory, setSkillsCat] = useState([]);
-    const [dataLoaded, setDataLoaded] = useState(false);
-
-    useEffect(() => {
-        async function getData() {
-            axios.get(
-                "https://yathavanparamesh.ca/api/expertise/getSkillCategories",
-            ).then((response) => {
-                for (let instance of response.data) {
-                    setSkillsCat(skillsCategory => [...skillsCategory, instance]);
-                }
-                setDataLoaded(true);
-            }).catch((err) => {
-                throw err;
-            });
-        }
-
-        getData();
-    }, []);
-
-
-    return (
-        <div>
-            {
-                dataLoaded ? (
-                    <div className="skill-graph-container">
-                        {
-                            skillsCategory.map((val, ind) => {
-                                return (
-                                    <div className="skill_panel">
-                                        <p>{val.name}</p>
-                                        <Skills category={val.cat_id} />
-                                    </div>
-                                );
-                            })
-                        }
+                    <div className="col-md-12 bg-white">
+                        <h1 id="skills_heading">Skills</h1>
+                        <BarChart height={document.body.clientWidth} width={document.body.clientWidth} data={skills} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                            <defs>
+                                <linearGradient id="green_fade" x1="1" y1="0" x2="0" y2="0">
+                                    <stop offset="0%" stopColor="#2da6e3" stopOpacity={0.8} />
+                                    <stop offset="100%" stopColor="#2da6e3" stopOpacity={0} />
+                                </linearGradient>
+                            </defs>
+                            <XAxis type="number" label="Years" />
+                            <YAxis width={200} type="category" dataKey="name" />
+                            <Tooltip formatter={(v, n, p) => { return v + " years"; }} />
+                            <Bar dataKey="learned" fillOpacity={0.9} fill="url(#green_fade)" barSize={25} />
+                        </BarChart>
                     </div>
                 ) : <p>Data Loading...</p>
             }
         </div>
     );
 };
-

@@ -1,100 +1,108 @@
-@font-face {
-  font-family: "GoogleSans-BoldItalic";
+/* @font-face {
+  /* font-family: "GoogleSans-BoldItalic"; 
   src: url("./assets/fonts/GoogleSans-BoldItalic.ttf");
 }
 
 @font-face {
-  font-family: "GoogleSans-Bold";
+  /* font-family: "GoogleSans-Bold"; 
   src: url("./assets/fonts/GoogleSans-Bold.ttf");
 }
 
 @font-face {
-  font-family: "GoogleSans-Italic";
+  /* font-family: "GoogleSans-Italic"; 
   src: url("./assets/fonts/GoogleSans-Italic.ttf");
 }
 
 @font-face {
-  font-family: "GoogleSans-MediumItalic";
+  /* font-family: "GoogleSans-MediumItalic"; 
   src: url("./assets/fonts/GoogleSans-MediumItalic.ttf");
 }
 
 @font-face {
-  font-family: "GoogleSans-Medium";
+  /* font-family: "GoogleSans-Medium"; 
   src: url("./assets/fonts/GoogleSans-Medium.ttf");
 }
 
 @font-face {
-  font-family: "GoogleSans-Regular";
+  /* font-family: "GoogleSans-Regular"; 
   src: url("./assets/fonts/GoogleSans-Regular.ttf");
 }
 
 @font-face {
-  font-family: "ProductSans-BoldItalic";
+  /* font-family: "ProductSans-BoldItalic"; 
   src: url("./assets/fonts/Product Sans Bold Italic.ttf");
 }
 
 @font-face {
-  font-family: "ProductSans-Bold";
+  /* font-family: "ProductSans-Bold"; 
   src: url("./assets/fonts/Product Sans Bold.ttf");
 }
 
 @font-face {
-  font-family: "ProductSans-Italic";
+  /* font-family: "ProductSans-Italic"; 
   src: url("./assets/fonts/Product Sans Italic.ttf");
 }
 
 @font-face {
-  font-family: "ProductSans-Regular";
+  /* font-family: "ProductSans-Regular"; 
   src: url("./assets/fonts/Product Sans Regular.ttf");
 }
 
 @font-face {
-  font-family: "Quicksand-Regular";
+  /* font-family: "Quicksand-Regular"; 
   src: url("./assets/fonts/Quicksand-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Quicksand-Bold";
+  /* font-family: "Quicksand-Bold"; 
   src: url("./assets/fonts/Quicksand-Bold.ttf");
 }
 
 @font-face {
-  font-family: "Quicksand-Light";
+  /* font-family: "Quicksand-Light"; 
   src: url("./assets/fonts/Quicksand-Light.ttf");
 }
 
 @font-face {
-  font-family: "Quicksand-Medium";
+  /* font-family: "Quicksand-Medium"; 
   src: url("./assets/fonts/Quicksand-Medium.ttf");
 }
 
 @font-face {
-  font-family: "Goudy";
+  /* font-family: "Goudy"; 
   src: url("./assets/fonts/Goudy\ Text\ MT\ Std\ Regular.otf");
 }
 
 @font-face {
-  font-family: "Comic";
+  /* font-family: "Comic"; 
   src: url("./assets/fonts/comic.ttf");
 }
 
 @font-face {
-  font-family: "LoveYaLikeASister";
+  /* font-family: "LoveYaLikeASister"; 
   src: url("./assets/fonts/LoveYaLikeASister.ttf");
 }
 
 @font-face {
-  font-family: "Bangers";
+  /* font-family: "Bangers"; 
   src: url("./assets/fonts/Bangers-Regular.ttf");
-}
+}*/
 
 * {
   user-select: none;   
   scrollbar-width: none;    
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: 'Raleway', sans-serif;
+  /* background-color: rgb(41, 41, 41); */
+  height: 100%;
 }
 
 #comptag {
-  font-family: "Quicksand-Light";
+  /* font-family: "Quicksand-Light"; */
   font-size: 24px;
 }
 
@@ -129,7 +137,7 @@
 }
 
 .pagecont {
-  margin: 10px;
+  /* margin: 10px; */  
 }
 
 @keyframes App-logo-spin {
