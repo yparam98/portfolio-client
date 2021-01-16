@@ -25,14 +25,14 @@ export default function Skills() {
             {
                 dataLoaded ? (
                     <div className="col-md-12 bg-white">
-                        <BarChart height={document.body.clientWidth} width={document.body.clientWidth - 20} data={skills} layout="vertical">
+                        <BarChart height={document.body.clientHeight} width={document.body.clientWidth - 20} data={skills} layout="vertical">
                             <defs>
                                 <linearGradient id="green_fade" x1="1" y1="0" x2="0" y2="0">
                                     <stop offset="0%" stopColor="#2da6e3" stopOpacity={0.8} />
                                     <stop offset="100%" stopColor="#2da6e3" stopOpacity={0} />
                                 </linearGradient>
                             </defs>
-                            <XAxis type="number" label="Years" />
+                            <XAxis type="number" />
                             <YAxis width={200} type="category" dataKey="name" />
                             <Tooltip formatter={(v, n, p) => { return v + " years"; }} />
                             <Bar dataKey="learned" fillOpacity={0.9} fill="url(#green_fade)" barSize={25} />

@@ -10,7 +10,7 @@ import twitter_logo from '../../assets/icons/twitter.png'
 import youtube_logo from '../../assets/icons/youtube.png'
 import telegram_logo from '../../assets/icons/telegram.png'
 
-class Main extends Component {
+class Splash extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -57,12 +57,6 @@ class Main extends Component {
     render() {
         return (
             <div class="site-center stack">
-                <div class="name-title">Yathavan Parameshwaran</div>
-                <Link to="/portfolio" style={{ textDecoration: "none" }}>
-                    <button type="button" class="btn btn-primary button-text">
-                        Portfolio
-                    </button>
-                </Link>
                 <div class="splash_reference_buttons side_stack">
                     {
                         this.state.social_media.map((val, ind) => {
@@ -77,4 +71,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default Splash;

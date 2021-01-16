@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import { default as PortfolioMain } from './Components/Portfolio/Main';
-import { default as Splash } from './Components/Splash/Main';
+import { default as Splash } from './Components/Splash/Splash';
 
 class App extends Component {
   render() {
@@ -12,11 +12,11 @@ class App extends Component {
         <BrowserRouter>
           <div class="pagecont">
             <Switch>
-              <Route path="/portfolio">
+              {/* <Route path="/portfolio">
                 <PortfolioMain />
-              </Route>
+              </Route> */}
               <Route path="/">
-                <Splash />
+                <PortfolioMain />
               </Route>
             </Switch>
           </div>
