@@ -40,7 +40,7 @@ class Education extends Component {
         }
 
         return (
-            <div style={{backgroundColor: 'white'}}>
+            <div>
                 {/* <h1 id="education_heading">Education</h1> */}
                 {
                     this.state.dataLoaded ? (
