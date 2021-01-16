@@ -25,4 +25,10 @@
     color: white;
     font-size: 50px;
     text-align: center;
+    width: 100%;
+
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+
 }

@@ -34,11 +34,6 @@
 }
 
 .skill_panel {
-    border: 0.5px;
-    border-radius: 15px;
-    border-color: black;
-    border-style: dashed;
-
     margin: 10px;
     padding: 15px;
 }

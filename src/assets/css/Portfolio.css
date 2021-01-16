@@ -1,7 +1,9 @@
 #portfolio_container {
-    height: 100%;
-    background-image: url('https://yathavanparamesh.ca/static/images/backdrop.jpg');
+    /* height: 100%; */
+    background-image: url('../images/ines-gohringer-i674lycwSB0-unsplash.jpg');
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 0% 0%;
+    scroll-behavior: smooth;
 }

@@ -11,16 +11,18 @@ export default function Main() {
     const [state_height, setHeight] = useState(document.body.clientHeight);
     const [state_width, setWidth] = useState(document.body.clientWidth);
 
-    useEffect(() => {
-        document.addEventListener('scroll', (e) => {
-            setHeight(state_height - window.scrollY);
-            window.scrollTo({
-                top: document.body.clientHeight,
-                left: 0,
-                behavior: 'smooth'
-            });
-        });
-    }, []);
+    // useEffect(() => {
+    //     document.addEventListener('scroll', (e) => {
+    //         setHeight(state_height - window.scrollY);
+    //         if (window.scrollY == 0) {
+    //             window.scrollTo({
+    //                 top: document.body.clientHeight,
+    //                 left: 0,
+    //                 behavior: 'smooth'
+    //             });
+    //         }
+    //     });
+    // }, []);
 
     return (
         // <div>

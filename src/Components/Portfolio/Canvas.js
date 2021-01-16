@@ -8,9 +8,7 @@ export default function Canvas() {
 
     useEffect(() => {
         document.addEventListener('scroll', (e) => {
-            if (state_height > 0) {
-                setHeight(state_height - window.scrollY);
-            }
+            setHeight(state_height - window.scrollY);
         });
     }, []);
 
@@ -45,7 +43,7 @@ export default function Canvas() {
 
     return (
         // Fade
-        <div className="canvas" style={{ height: state_height, width: state_width }}>
+        <div className="canvas" style={{ height: state_height, width: '100%' }}>
             <p id="splashtag">Yathavan Parameshwaran</p>
         </div>
     );
