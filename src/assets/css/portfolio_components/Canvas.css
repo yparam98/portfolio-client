@@ -21,7 +21,7 @@
     animation-name: slideLR;
     animation-duration: 1s;
 
-    /* font-family: 'Bangers'; */
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     font-size: 50px;
     text-align: center;
@@ -31,4 +31,5 @@
     position: -webkit-sticky;
     top: 0;
 
+    margin: 0;
 }

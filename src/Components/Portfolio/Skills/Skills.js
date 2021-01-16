@@ -4,7 +4,7 @@ import moment from 'moment';
 // import * as Recharts from "recharts/umd/Recharts";
 import { BarChart, Tooltip, XAxis, YAxis, Bar } from "recharts/umd/Recharts";
 
-import "../../assets/css/portfolio_components/Skills.css";
+import "../../../assets/css/portfolio_components/Skills.css";
 
 export default function Skills() {
     const [skills, setSkills] = useState([]);
@@ -25,8 +25,7 @@ export default function Skills() {
             {
                 dataLoaded ? (
                     <div className="col-md-12 bg-white">
-                        <h1 id="skills_heading">Skills</h1>
-                        <BarChart height={document.body.clientWidth} width={document.body.clientWidth} data={skills} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                        <BarChart height={document.body.clientWidth} width={document.body.clientWidth - 20} data={skills} layout="vertical">
                             <defs>
                                 <linearGradient id="green_fade" x1="1" y1="0" x2="0" y2="0">
                                     <stop offset="0%" stopColor="#2da6e3" stopOpacity={0.8} />
