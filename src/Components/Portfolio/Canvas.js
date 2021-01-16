@@ -10,8 +10,10 @@ export default function Canvas() {
     return (
         // Fade
         <div className="canvas" style={{ height: state_height, width: state_width }}>
-            <p id="splashtag">Yathavan Parameshwaran</p>
-            <Splash/>
+            <div id="splashtag-bg">
+                <p id="splashtag">Yathavan Parameshwaran</p>
+            </div>
+            <Splash />
         </div>
     );
 }
