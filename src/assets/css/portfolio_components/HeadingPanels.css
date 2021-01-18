@@ -3,8 +3,9 @@
 }
 
 #tag {
+    font-family: 'Reem Kufi', sans-serif;
     color: white;
-    font-size: 60px;
+    font-size: 55px;
     position: sticky;
     margin: 0;
     text-align: center;

@@ -5,13 +5,14 @@ import moment from 'moment';
 import { BarChart, Tooltip, XAxis, YAxis, Bar } from "recharts/umd/Recharts";
 
 import "../../../assets/css/portfolio_components/Skills.css";
+import { Col } from 'react-bootstrap';
 
 export default function Skills() {
     const [skills, setSkills] = useState([]);
     const [dataLoaded, setDataLoaded] = useState(false);
 
     useEffect(async () => {
-        const result = await axios("https://yathavanparamesh.ca/api/expertise/getNeededSkills");
+        const result = await axios("/api/expertise/getNeededSkills");
 
         result.data.forEach((instance) => {
             instance.learned = (moment().year() - instance.learned);
@@ -24,7 +25,7 @@ export default function Skills() {
         <div>
             {
                 dataLoaded ? (
-                    <div className="col-md-12 bg-white">
+                    <Col md={12} style={{ backgroundColor: 'white' }}>
                         <BarChart height={document.body.clientHeight} width={document.body.clientWidth - 20} data={skills} layout="vertical">
                             <defs>
                                 <linearGradient id="green_fade" x1="1" y1="0" x2="0" y2="0">
@@ -37,7 +38,7 @@ export default function Skills() {
                             <Tooltip formatter={(v, n, p) => { return v + " years"; }} />
                             <Bar dataKey="learned" fillOpacity={0.9} fill="url(#green_fade)" barSize={25} />
                         </BarChart>
-                    </div>
+                    </Col>
                 ) : <p>Data Loading...</p>
             }
         </div>
