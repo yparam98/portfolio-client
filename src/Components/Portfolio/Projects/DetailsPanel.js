@@ -8,7 +8,7 @@ export default function DetailsPanel(props) {
     const [dataLoaded, setDataLoaded] = useState(false);
 
     useEffect(async () => {
-        axios.get("https://yathavanparamesh.ca/api/experience/getProjectDetails", {
+        axios.get("/api/experience/getProjectDetails", {
             params: { id: props.project.id }
         }).then((response) => {
             setProject(response.data[0]);

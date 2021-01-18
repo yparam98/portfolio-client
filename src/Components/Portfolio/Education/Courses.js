@@ -8,7 +8,7 @@ export default function Courses(props) {
     const [courses, setCourses] = useState([]);
 
     useEffect(async () => {
-        const result = axios("https://yathavanparamesh.ca/api/education/getCoursesByDegree", {
+        const result = axios("/api/education/getCoursesByDegree", {
             params: {
                 id: props.degree.degree_id
             }

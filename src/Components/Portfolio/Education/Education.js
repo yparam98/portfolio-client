@@ -15,7 +15,7 @@ class Education extends Component {
     }
 
     getDegrees = async () => {
-        await axios.get("https://yathavanparamesh.ca/api/education/getDegrees", {
+        await axios.get("/api/education/getDegrees", {
 
 
         }).then((response) => {

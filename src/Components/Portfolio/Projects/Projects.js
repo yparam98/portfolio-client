@@ -8,7 +8,7 @@ export default function Main() {
 
     useEffect(async () => {
         axios.get(
-            "https://yathavanparamesh.ca/api/experience/getProjects"
+            "/api/experience/getProjects"
         ).then((response) => {
             setProjects(response.data);
         });

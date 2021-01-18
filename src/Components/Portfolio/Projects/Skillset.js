@@ -13,7 +13,7 @@ export default function SkillPanel(props) {
 
 
     useEffect(async () => {
-        axios.get("https://yathavanparamesh.ca/api/expertise/getSkillsByProject", {
+        axios.get("/api/expertise/getSkillsByProject", {
             params: { id: props.id }
         }).then((response) => {
             setSkills(response.data);

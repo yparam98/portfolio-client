@@ -12,7 +12,7 @@ export default function Skills() {
     const [dataLoaded, setDataLoaded] = useState(false);
 
     useEffect(async () => {
-        const result = await axios("https://yathavanparamesh.ca/api/expertise/getNeededSkills");
+        const result = await axios("/api/expertise/getNeededSkills");
 
         result.data.forEach((instance) => {
             instance.learned = (moment().year() - instance.learned);

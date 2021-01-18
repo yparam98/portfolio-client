@@ -25,7 +25,7 @@ class Degree extends Component {
 
     getSchool = async () => {
         await axios.get(
-            this.state.api_url + "/api/education/getSchoolByID",
+            "/api/education/getSchoolByID",
             {
                 params: {
                     id: this.props.degree.school_id
