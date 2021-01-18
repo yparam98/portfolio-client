@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c3da8420.chunk.css",
+    "main.js": "/static/js/main.985e84da.chunk.js",
+    "main.js.map": "/static/js/main.985e84da.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.daefa9da.js",
+    "runtime-main.js.map": "/static/js/runtime-main.daefa9da.js.map",
+    "static/js/2.e7b79551.chunk.js": "/static/js/2.e7b79551.chunk.js",
+    "static/js/2.e7b79551.chunk.js.map": "/static/js/2.e7b79551.chunk.js.map",
+    "static/js/3.61eb7aaa.chunk.js": "/static/js/3.61eb7aaa.chunk.js",
+    "static/js/3.61eb7aaa.chunk.js.map": "/static/js/3.61eb7aaa.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.c3da8420.chunk.css.map": "/static/css/main.c3da8420.chunk.css.map",
+    "static/js/2.e7b79551.chunk.js.LICENSE.txt": "/static/js/2.e7b79551.chunk.js.LICENSE.txt",
+    "static/media/facebook.5b4225fa.png": "/static/media/facebook.5b4225fa.png",
+    "static/media/Portfolio.css": "/static/media/ines-gohringer-i674lycwSB0-unsplash.a9fc6c42.jpg",
+    "static/media/instagram.7faac01c.png": "/static/media/instagram.7faac01c.png",
+    "static/media/linkedin.18bff6d6.png": "/static/media/linkedin.18bff6d6.png",
+    "static/media/telegram.164e68cd.png": "/static/media/telegram.164e68cd.png",
+    "static/media/twitter.1c7abcd2.png": "/static/media/twitter.1c7abcd2.png",
+    "static/media/youtube.1149e3c9.png": "/static/media/youtube.1149e3c9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.daefa9da.js",
+    "static/js/2.e7b79551.chunk.js",
+    "static/css/main.c3da8420.chunk.css",
+    "static/js/main.985e84da.chunk.js"
+  ]
+}
