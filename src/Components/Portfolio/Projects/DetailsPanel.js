@@ -2,11 +2,10 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Carousel, Modal } from 'react-bootstrap';
 import SkillPanel from './Skillset';
+import ProjectImages from './Images'
 
 export default function DetailsPanel(props) {
     const [project, setProject] = useState(null);
-    const [projectImageList, setProjectImageList] = useState(null);
-    // const [images, setImages] = useState(false);
     const [dataLoaded, setDataLoaded] = useState(false);
 
     useEffect(async () => {
@@ -14,12 +13,7 @@ export default function DetailsPanel(props) {
             params: { id: props.project.id }
         }).then((response) => {
             setProject(response.data[0]);
-
-            axios.get("/api/experience/getProjectImages", {
-                params: { id: props.project.id }
-            }).then((response) => {
-                setProjectImageList(response.data);
-            }).finally(setDataLoaded(true));
+            setDataLoaded(true);
         });
     }, []);
 
@@ -33,13 +27,7 @@ export default function DetailsPanel(props) {
             </Modal.Body>
             <Modal.Footer>
                 <SkillPanel id={project.id} />
-                <Carousel>
-                    {
-                        projectImageList.map((item, index) => {
-                            return <Carousel.Item><img className="d-block w-100" src={"/static/images/project/" + props.project.id + "/" + item} /></Carousel.Item>
-                        })
-                    }
-                </Carousel>
+                <ProjectImages id={props.project.id} />
             </Modal.Footer>
         </Modal>
     ) : <p>Loading...</p>;
