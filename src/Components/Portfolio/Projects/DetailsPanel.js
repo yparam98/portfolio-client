@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Carousel, Modal } from 'react-bootstrap';
+import { Carousel, Col, Modal, Row } from 'react-bootstrap';
 import SkillPanel from './Skillset';
 import ProjectImages from './Images'
 
@@ -18,16 +18,22 @@ export default function DetailsPanel(props) {
     }, []);
 
     return dataLoaded ? (
-        <Modal show={props.show} onHide={() => { props.close(false) }}>
+        <Modal size="lg" show={props.show} onHide={() => { props.close(false) }}>
             <Modal.Header>
                 <Modal.Title>{project.name}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                {project.description}
+                <Row>
+                    <Col lg={6}>
+                        {project.description}
+                    </Col>
+                    <Col lg={6}>
+                        <ProjectImages id={props.project.id} />
+                    </Col>
+                </Row>
             </Modal.Body>
             <Modal.Footer>
                 <SkillPanel id={project.id} />
-                <ProjectImages id={props.project.id} />
             </Modal.Footer>
         </Modal>
     ) : <p>Loading...</p>;
