@@ -7,7 +7,7 @@ export default function OutlineCard(props) {
 
     return (
         <Col lg={3}>
-            <Card style={{ margin: '10px' }} onClick={() => setShow(true)}>
+            <Card style={{ margin: '10px', height: '200px' }} onClick={() => setShow(true)}>
                 <Card.Body>
                     <Card.Title>{props.project.name}</Card.Title>
                     <Card.Text>{props.project.summary}</Card.Text>
