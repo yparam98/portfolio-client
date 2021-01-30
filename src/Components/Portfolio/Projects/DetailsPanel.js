@@ -19,9 +19,7 @@ export default function DetailsPanel(props) {
                 params: { id: props.project.id }
             }).then((response) => {
                 setProjectImageList(response.data);
-            }).finally(() => {
-                setDataLoaded(true);
-            });
+            }).finally(setDataLoaded(true));
         });
     }, []);
 
