@@ -26,6 +26,11 @@ class Splash extends Component {
                     link: "https://github.com/yparam98"
                 },
                 {
+                    capt: "devpost",
+                    icon: devpost_logo,
+                    link: "https://devpost.com/yathavanparamesh1998"
+                },
+                {
                     capt: "instagram",
                     icon: instagram_logo,
                     link: "https://www.instagram.com/yparam98/"
