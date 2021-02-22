@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/css/Splash.css';
 
-import facebook_logo from '../../assets/icons/facebook.png'
-import github_logo from '../../assets/icons/github.png'
-import instagram_logo from '../../assets/icons/instagram.png'
-import linkedin_logo from '../../assets/icons/linkedin.png'
-import twitter_logo from '../../assets/icons/twitter.png'
-import youtube_logo from '../../assets/icons/youtube.png'
-import telegram_logo from '../../assets/icons/telegram.png'
+import facebook_logo from '../../assets/icons/facebook.png';
+import github_logo from '../../assets/icons/github.png';
+import devpost_logo from '../../assets/icons/devpost.png';
+import instagram_logo from '../../assets/icons/instagram.png';
+import linkedin_logo from '../../assets/icons/linkedin.png';
+import twitter_logo from '../../assets/icons/twitter.png';
+import youtube_logo from '../../assets/icons/youtube.png';
+import telegram_logo from '../../assets/icons/telegram.png';
 
 class Splash extends Component {
     constructor(props) {
