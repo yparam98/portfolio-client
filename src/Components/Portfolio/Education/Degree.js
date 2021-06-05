@@ -44,7 +44,7 @@ class Degree extends Component {
         return this.state.dataLoaded ? (
             <div className="degree_panel">
                 <Col md={3} className="animateEntrySlideLR">
-                    <img id='school_logo' src={"/static/" + this.state.school.logo_path} />
+                    <img id='school_logo' src={"/static/logos/" + this.state.school.logo_path} />
                     <div id="degree_tag" style={{ color: this.state.school.colour }}>
                         <p><strong>{this.props.degree.type}</strong> in {this.props.degree.name}</p>
                     </div>
